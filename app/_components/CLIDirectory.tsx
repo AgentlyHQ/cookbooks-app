@@ -25,7 +25,7 @@ export function CLIDirectory({ clis, stats }: CLIDirectoryProps) {
     return (
       !q ||
       cli.name.toLowerCase().includes(q) ||
-      cli.description.toLowerCase().includes(q) ||
+      (cli.description ?? "").toLowerCase().includes(q) ||
       (cli.github ?? "").toLowerCase().includes(q) ||
       (cli.npm ?? "").toLowerCase().includes(q) ||
       (cli.pip ?? "").toLowerCase().includes(q)
