@@ -1,0 +1,13 @@
+name: Deploy on registry update
+
+on:
+  repository_dispatch:
+    types: [registry-updated]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel deployment
+        run: |
+          curl -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}"
