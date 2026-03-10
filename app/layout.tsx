@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { ThemeProvider } from "@/components/ThemeToggle";
+import { GoogleAnalytics } from "next/third-parties/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body className="min-h-screen antialiased">
         <ThemeProvider>{children}</ThemeProvider>
+        <GoogleAnalytics gaId="G-RGNDH5QLD0" />
       </body>
     </html>
   );
