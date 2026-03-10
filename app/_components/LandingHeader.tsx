@@ -16,7 +16,7 @@ export function LandingHeader() {
           <span className="kl-soon-badge">soon</span>
         </a>
         <div className="kl-nav-sep" />
-        <a href="#faq" className="kl-nav-link">FAQ</a>
+        <a href="/faq" className="kl-nav-link">FAQ</a>
         <div className="kl-nav-sep" />
         <a href="https://use-agently.com" className="kl-nav-link" target="_blank" rel="noopener noreferrer">Agently ↗</a>
         <div className="kl-nav-sep" />
