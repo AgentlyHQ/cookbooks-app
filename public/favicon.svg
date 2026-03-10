@@ -1,11 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="5" fill="#0a0a0a"/>
-  <text
-    x="2"
-    y="23"
-    font-family="'Courier New', monospace"
-    font-size="15"
-    font-weight="700"
-    fill="#4d7a08"
-  >&gt;k</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%">
+  <rect width="64" height="64" rx="14" fill="#F3F2EB" />
+  
+  <g fill-rule="evenodd">
+    <path d="M 27 17 H 7 V 45 H 27 V 37 H 15 V 25 H 27 Z"
+          fill="none" stroke="#608c33" stroke-width="1.5"
+          transform="translate(2, 2)" />
+          
+    <path d="M 27 17 H 7 V 45 H 27 V 37 H 15 V 25 H 27 Z"
+          fill="#608c33" />
+
+    <path d="M 35 17 H 55 V 29 H 51 V 33 H 55 V 45 H 35 Z M 43 25 V 29 H 51 V 25 Z M 43 33 V 37 H 51 V 33 Z"
+          fill="none" stroke="#1a1a1a" stroke-width="1.5"
+          transform="translate(2, 2)" />
+          
+    <path d="M 35 17 H 55 V 29 H 51 V 33 H 55 V 45 H 35 Z M 43 25 V 29 H 51 V 25 Z M 43 33 V 37 H 51 V 33 Z"
+          fill="#1a1a1a" />
+  </g>
 </svg>
