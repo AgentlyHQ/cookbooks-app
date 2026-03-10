@@ -210,8 +210,38 @@ html[data-theme="dark"] .kl-root {
   padding: 6px 14px;
   letter-spacing: 0.06em;
   transition: color 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 .kl-nav-link:hover { color: var(--kl-text); }
+
+.kl-nav-link--soon { opacity: 0.5; pointer-events: none; }
+
+.kl-soon-badge {
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  background: var(--kl-border-hi);
+  color: var(--kl-muted);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+.kl-nav-submit {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 5px 12px;
+  margin-left: 4px;
+  border-radius: 5px;
+  border: 1px solid var(--kl-accent);
+  color: var(--kl-accent);
+  transition: background 0.15s, color 0.15s;
+}
+.kl-nav-submit:hover { background: var(--kl-accent); color: #fff; }
 
 .kl-nav-sep {
   width: 1px;
@@ -607,6 +637,64 @@ html[data-theme="dark"] .kl-root {
   background: var(--kl-accent);
   animation: kl-pulse 2.2s ease-in-out infinite;
   flex-shrink: 0;
+}
+
+/* ── FAQ ── */
+.kl-faq {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 48px 24px 56px;
+  border-top: 1px solid var(--kl-border);
+}
+
+.kl-faq-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--kl-muted);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.kl-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.kl-faq-item {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--kl-border);
+}
+.kl-faq-item:first-child { border-top: 1px solid var(--kl-border); }
+
+.kl-faq-item dt {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--kl-text);
+  margin-bottom: 6px;
+}
+
+.kl-faq-item dd {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--kl-muted);
+  margin: 0;
+}
+
+.kl-faq-item dd a {
+  color: var(--kl-accent);
+  text-decoration: none;
+}
+.kl-faq-item dd a:hover { text-decoration: underline; }
+
+.kl-faq-item dd code {
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  background: var(--kl-bg-raised);
+  padding: 1px 5px;
+  border-radius: 3px;
+  color: var(--kl-text);
 }
 
 /* ── Footer ── */
