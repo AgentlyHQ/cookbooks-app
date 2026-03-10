@@ -10,16 +10,16 @@ const ASCII_LINES = [
 
 export function LandingHero() {
   return (
-    <section className="kl-hero">
-      <div className="kl-dot-grid" />
-      <div className="kl-glow" />
+    <section className="cb-hero">
+      <div className="cb-dot-grid" />
+      <div className="cb-glow" />
 
-      <pre className="kl-ascii" aria-label="COOKBOOKS">
+      <pre className="cb-ascii" aria-label="COOKBOOKS">
         {ASCII_LINES.map((segments, i) => (
           <span key={i}>
             {segments.map((seg, j) =>
               seg.hi ? (
-                <span key={j} className="kl-hi">{seg.t}</span>
+                <span key={j} className="cb-hi">{seg.t}</span>
               ) : (
                 seg.t
               )
@@ -29,18 +29,18 @@ export function LandingHero() {
         ))}
       </pre>
 
-      <p className="kl-wordplay">
+      <p className="cb-wordplay">
         <code>cli tools</code>&nbsp;→&nbsp;collected in&nbsp;<code>cookbooks</code>
       </p>
 
-      <div className="kl-hero-copy">
-        <p className="kl-eyebrow">
+      <div className="cb-hero-copy">
+        <p className="cb-eyebrow">
           The <strong>Authoritative</strong> Registry for CLI Tools
         </p>
-        <h1 className="kl-h1">
+        <h1 className="cb-h1">
           Where agentic tools<br />come to find what they need.
         </h1>
-        <p className="kl-subtext">
+        <p className="cb-subtext">
           When Claude, Cursor, Copilot, or Codex reach for a CLI tool,<br />
           they reach for Cookbooks. One registry. Every tool. No ambiguity.
         </p>

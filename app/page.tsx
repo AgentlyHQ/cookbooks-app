@@ -12,17 +12,17 @@ export default async function HomePage() {
   const stars = Object.fromEntries(starEntries);
 
   return (
-    <div className="kl-root">
+    <div className="cb-root">
       <LandingHeader />
       <LandingHero />
 <RegistrySection clis={clis} stars={stars} />
       <div id="workflows" />
-      <div className="kl-footer-wrap">
-        <footer className="kl-footer">
-          <div className="kl-footer-left">
+      <div className="cb-footer-wrap">
+        <footer className="cb-footer">
+          <div className="cb-footer-left">
             <strong>cookbooks</strong> — where agentic tools come to find what they need
           </div>
-          <div className="kl-footer-links">
+          <div className="cb-footer-links">
             <a href="https://github.com/AgentlyHQ" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://github.com/AgentlyHQ/cookbooks-registry" target="_blank" rel="noopener noreferrer">Registry</a>
           </div>

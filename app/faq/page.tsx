@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function FaqPage() {
   return (
-    <div className="kl-root">
+    <div className="cb-root">
       <LandingHeader />
       <div style={{ paddingTop: "52px" }}>
         <FaqSection />

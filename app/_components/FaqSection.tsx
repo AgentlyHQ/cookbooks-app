@@ -1,9 +1,9 @@
 export function FaqSection() {
   return (
-    <section className="kl-faq" id="faq">
-      <div className="kl-faq-title">FAQ</div>
-      <dl className="kl-faq-list">
-        <div className="kl-faq-item">
+    <section className="cb-faq" id="faq">
+      <div className="cb-faq-title">FAQ</div>
+      <dl className="cb-faq-list">
+        <div className="cb-faq-item">
           <dt>How do I add a CLI?</dt>
           <dd>
             Open a pull request on the{" "}
@@ -18,21 +18,21 @@ export function FaqSection() {
           </dd>
         </div>
 
-        <div className="kl-faq-item">
+        <div className="cb-faq-item">
           <dt>What qualifies for the registry?</dt>
           <dd>
             Any CLI tool designed to work with agentic workflows — tools that an LLM or agent might invoke to interact with external services, APIs, or local systems. It should be publicly available and installable.
           </dd>
         </div>
 
-        <div className="kl-faq-item">
+        <div className="cb-faq-item">
           <dt>What are Workflows?</dt>
           <dd>
             Workflows are coming soon — curated sequences of CLI tools and prompts for common agentic tasks. If you have ideas, open an issue on the registry repo.
           </dd>
         </div>
 
-        <div className="kl-faq-item">
+        <div className="cb-faq-item">
           <dt>Is this affiliated with Agently?</dt>
           <dd>
             Yes — cookbooks is maintained by{" "}

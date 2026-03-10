@@ -46,54 +46,54 @@ export default async function CLIDetailPage({ params }: { params: Promise<{ slug
   ]);
 
   return (
-    <main className="kl-detail">
+    <main className="cb-detail">
       {/* Back */}
-      <Link href="/" className="kl-back">
+      <Link href="/" className="cb-back">
         <ArrowLeft size={13} />
         Back to registry
       </Link>
 
       {/* Page header */}
-      <div className="kl-detail-title-row">
-        <h1 className="kl-detail-h1">{cli.name}</h1>
+      <div className="cb-detail-title-row">
+        <h1 className="cb-detail-h1">{cli.name}</h1>
         {(meta.description ?? cli.description) && (
-          <p className="kl-detail-desc">{meta.description ?? cli.description}</p>
+          <p className="cb-detail-desc">{meta.description ?? cli.description}</p>
         )}
       </div>
 
       {/* 2-col grid — sidebar first in DOM (mobile-first order), swapped visually on desktop */}
-      <div className="kl-detail-grid">
+      <div className="cb-detail-grid">
 
         {/* Sidebar — order-1 mobile, order-2 desktop */}
-        <div className="kl-sidebar kl-detail-sidebar">
+        <div className="cb-sidebar cb-detail-sidebar">
           {/* About */}
-          <div className="kl-card">
-            <div className="kl-card-header">
-              <span className="kl-card-label">About</span>
+          <div className="cb-card">
+            <div className="cb-card-header">
+              <span className="cb-card-label">About</span>
             </div>
-            <div className="kl-stat-row">
-              <span className="kl-stat-label">
+            <div className="cb-stat-row">
+              <span className="cb-stat-label">
                 <Star size={13} />
                 Stars
               </span>
-              <span className="kl-stat-value">{formatNumber(meta.stars)}</span>
+              <span className="cb-stat-value">{formatNumber(meta.stars)}</span>
             </div>
           </div>
 
           {/* Repository */}
           {cli.github && (
-            <div className="kl-card">
-              <div className="kl-card-header">
-                <span className="kl-card-label">Repository</span>
+            <div className="cb-card">
+              <div className="cb-card-header">
+                <span className="cb-card-label">Repository</span>
               </div>
               <a
                 href={`https://github.com/${cli.github}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="kl-ext-link"
+                className="cb-ext-link"
               >
                 <GitFork size={13} style={{ flexShrink: 0 }} />
-                <span className="kl-ext-repo">{cli.github}</span>
+                <span className="cb-ext-repo">{cli.github}</span>
                 <ExternalLink size={11} style={{ flexShrink: 0 }} />
               </a>
             </div>
@@ -104,13 +104,13 @@ export default async function CLIDetailPage({ params }: { params: Promise<{ slug
         </div>
 
         {/* README — order-2 mobile, order-1 desktop */}
-        <div className="kl-detail-readme">
+        <div className="cb-detail-readme">
           {readme ? (
-            <div className="kl-card">
-              <div className="kl-card-header">
-                <span className="kl-card-label">README.md</span>
+            <div className="cb-card">
+              <div className="cb-card-header">
+                <span className="cb-card-label">README.md</span>
               </div>
-              <div className="kl-readme-body">
+              <div className="cb-readme-body">
                 <article className="prose prose-sm dark:prose-invert max-w-none">
                   <ReactMarkdown
                     remarkPlugins={[remarkGfm]}
@@ -148,8 +148,8 @@ export default async function CLIDetailPage({ params }: { params: Promise<{ slug
               </div>
             </div>
           ) : (
-            <div className="kl-card">
-              <div className="kl-no-readme">No README available for this repository.</div>
+            <div className="cb-card">
+              <div className="cb-no-readme">No README available for this repository.</div>
             </div>
           )}
         </div>

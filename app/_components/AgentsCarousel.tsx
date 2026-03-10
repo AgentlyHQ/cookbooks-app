@@ -10,13 +10,13 @@ const ALL = [...AGENTS, ...AGENTS]; // duplicate for seamless loop
 
 export function AgentsCarousel() {
   return (
-    <section className="kl-agents">
-      <p className="kl-agents-label">Trusted by agentic tools</p>
-      <div className="kl-carousel-outer">
-        <div className="kl-carousel-track">
+    <section className="cb-agents">
+      <p className="cb-agents-label">Trusted by agentic tools</p>
+      <div className="cb-carousel-outer">
+        <div className="cb-carousel-track">
           {ALL.map((name, i) => (
-            <div key={i} className="kl-agent-chip">
-              <span className="kl-agent-pip" />
+            <div key={i} className="cb-agent-chip">
+              <span className="cb-agent-pip" />
               {name}
             </div>
           ))}

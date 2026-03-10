@@ -8,9 +8,9 @@ const TABS = ["All Time"];
 const PAGE_SIZE = 20;
 
 function rankClass(r: number) {
-  if (r === 1) return "kl-rank-1";
-  if (r === 2) return "kl-rank-2";
-  if (r === 3) return "kl-rank-3";
+  if (r === 1) return "cb-rank-1";
+  if (r === 2) return "cb-rank-2";
+  if (r === 3) return "cb-rank-3";
   return "";
 }
 
@@ -51,40 +51,40 @@ export function RegistrySection({ clis, stars }: Props) {
   const paginated = filtered.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
-    <section className="kl-registry" id="registry">
-      <div className="kl-reg-header">
-        <span className="kl-reg-title">CLI Registry</span>
-        <span className="kl-reg-count">
+    <section className="cb-registry" id="registry">
+      <div className="cb-reg-header">
+        <span className="cb-reg-title">CLI Registry</span>
+        <span className="cb-reg-count">
           <em>{clis.length}</em> tools
         </span>
       </div>
 
-      <div className="kl-tabs">
+      <div className="cb-tabs">
         {TABS.map((tab, i) => (
           <button
             key={tab}
-            className={`kl-tab${activeTab === i ? " kl-tab-active" : ""}`}
+            className={`cb-tab${activeTab === i ? " cb-tab-active" : ""}`}
             onClick={() => setActiveTab(i)}
           >
-            {i === 2 && <span className="kl-hot-dot" />}
+            {i === 2 && <span className="cb-hot-dot" />}
             {tab}
           </button>
         ))}
       </div>
 
-      <div className="kl-search-row">
+      <div className="cb-search-row">
         <input
-          className="kl-search-input"
+          className="cb-search-input"
           type="text"
           placeholder="Search the registry..."
           value={query}
           onChange={(e) => { setQuery(e.target.value); setPage(0); }}
           onKeyDown={(e) => { if (e.key === "Escape") { setQuery(""); setPage(0); } }}
         />
-        <span className="kl-search-shortcut">/</span>
+        <span className="cb-search-shortcut">/</span>
       </div>
 
-      <table className="kl-table">
+      <table className="cb-table">
         <thead>
           <tr>
             <th>#</th>
@@ -97,12 +97,12 @@ export function RegistrySection({ clis, stars }: Props) {
             <tr key={cli.slug} onClick={() => (window.location.href = `/${cli.slug}`)}>
               <td className={rankClass(page * PAGE_SIZE + i + 1)}>{page * PAGE_SIZE + i + 1}</td>
               <td>
-                <Link href={`/${cli.slug}`} className="kl-tool-name" style={{ textDecoration: "none" }}>
+                <Link href={`/${cli.slug}`} className="cb-tool-name" style={{ textDecoration: "none" }}>
                   {cli.name}
                 </Link>
-<div className="kl-tool-owner">{cli.github?.split("/")[0]}</div>
+<div className="cb-tool-owner">{cli.github?.split("/")[0]}</div>
               </td>
-              <td className="kl-stars-col">
+              <td className="cb-stars-col">
                 {formatStars(stars[cli.slug])}
               </td>
             </tr>
@@ -111,19 +111,19 @@ export function RegistrySection({ clis, stars }: Props) {
       </table>
 
       {totalPages > 1 && (
-        <div className="kl-pagination">
+        <div className="cb-pagination">
           <button
-            className="kl-page-btn"
+            className="cb-page-btn"
             onClick={() => setPage((p) => Math.max(0, p - 1))}
             disabled={page === 0}
           >
             ← Prev
           </button>
-          <span className="kl-page-info">
+          <span className="cb-page-info">
             {page + 1} / {totalPages}
           </span>
           <button
-            className="kl-page-btn"
+            className="cb-page-btn"
             onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
             disabled={page === totalPages - 1}
           >

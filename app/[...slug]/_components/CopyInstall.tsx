@@ -38,17 +38,17 @@ export function CopyInstall({ install }: { install?: CLIInstall }) {
   }
 
   return (
-    <div className="kl-card">
-      <div className="kl-card-header">
-        <span className="kl-card-label">Install</span>
+    <div className="cb-card">
+      <div className="cb-card-header">
+        <span className="cb-card-label">Install</span>
       </div>
-      <div className="kl-install-list">
+      <div className="cb-install-list">
         {cmds.map(({ label, cmd }) => (
-          <div key={label} className="kl-install-row">
-            <span className="kl-install-label">{label}</span>
-            <code className="kl-install-cmd">{cmd}</code>
+          <div key={label} className="cb-install-row">
+            <span className="cb-install-label">{label}</span>
+            <code className="cb-install-cmd">{cmd}</code>
             <button
-              className="kl-install-copy"
+              className="cb-install-copy"
               onClick={() => copy(cmd)}
               title="Copy"
               aria-label={`Copy ${label} install command`}

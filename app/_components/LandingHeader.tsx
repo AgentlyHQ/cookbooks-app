@@ -3,26 +3,26 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function LandingHeader() {
   return (
-    <header className="kl-header">
-      <Link href="/" className="kl-logo">
-        <span className="kl-logo-prompt">{'>'}</span>
-        <span className="kl-logo-wordmark">cookbooks</span>
+    <header className="cb-header">
+      <Link href="/" className="cb-logo">
+        <span className="cb-logo-prompt">{'>'}</span>
+        <span className="cb-logo-wordmark">cookbooks</span>
       </Link>
-      <nav className="kl-nav">
-        <a href="#registry" className="kl-nav-link">CLI Registry</a>
-        <div className="kl-nav-sep" />
-        <a href="#workflows" className="kl-nav-link kl-nav-link--soon">
+      <nav className="cb-nav">
+        <a href="#registry" className="cb-nav-link">CLI Registry</a>
+        <div className="cb-nav-sep" />
+        <a href="#workflows" className="cb-nav-link cb-nav-link--soon">
           Workflows
-          <span className="kl-soon-badge">soon</span>
+          <span className="cb-soon-badge">soon</span>
         </a>
-        <div className="kl-nav-sep" />
-        <a href="/faq" className="kl-nav-link">FAQ</a>
-        <div className="kl-nav-sep" />
-        <a href="https://use-agently.com" className="kl-nav-link" target="_blank" rel="noopener noreferrer">Agently ↗</a>
-        <div className="kl-nav-sep" />
+        <div className="cb-nav-sep" />
+        <a href="/faq" className="cb-nav-link">FAQ</a>
+        <div className="cb-nav-sep" />
+        <a href="https://use-agently.com" className="cb-nav-link" target="_blank" rel="noopener noreferrer">Agently ↗</a>
+        <div className="cb-nav-sep" />
         <a
           href="https://github.com/AgentlyHQ/cookbooks-registry/blob/main/clis.json"
-          className="kl-nav-submit"
+          className="cb-nav-submit"
           target="_blank"
           rel="noopener noreferrer"
         >
