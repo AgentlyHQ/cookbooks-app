@@ -1,5 +1,3 @@
-"use client";
-
 const AGENTS = [
   "Claude Code", "Cursor", "GitHub Copilot", "Cline", "OpenAI Codex",
   "Windsurf", "Roo", "Gemini CLI", "Kilo", "Aider", "Continue",

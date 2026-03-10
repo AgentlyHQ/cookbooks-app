@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import type { CLIEntry } from "@/lib/types";
 
@@ -27,6 +28,7 @@ interface Props {
 }
 
 export function RegistrySection({ clis, stars }: Props) {
+  const router = useRouter();
   const [query, setQuery] = useState("");
   const [activeTab, setActiveTab] = useState(0);
   const [page, setPage] = useState(0);
@@ -94,7 +96,7 @@ export function RegistrySection({ clis, stars }: Props) {
         </thead>
         <tbody>
           {paginated.map((cli, i) => (
-            <tr key={cli.slug} onClick={() => (window.location.href = `/${cli.slug}`)}>
+            <tr key={cli.slug} onClick={() => router.push(`/${cli.slug}`)}>
               <td className={rankClass(page * PAGE_SIZE + i + 1)}>{page * PAGE_SIZE + i + 1}</td>
               <td>
                 <Link href={`/${cli.slug}`} className="cb-tool-name" style={{ textDecoration: "none" }}>
