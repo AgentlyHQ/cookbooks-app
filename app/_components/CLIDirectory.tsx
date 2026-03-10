@@ -27,8 +27,8 @@ export function CLIDirectory({ clis, stats }: CLIDirectoryProps) {
       cli.name.toLowerCase().includes(q) ||
       (cli.description ?? "").toLowerCase().includes(q) ||
       (cli.github ?? "").toLowerCase().includes(q) ||
-      (cli.npm ?? "").toLowerCase().includes(q) ||
-      (cli.pip ?? "").toLowerCase().includes(q)
+      (cli.install?.npm ?? "").toLowerCase().includes(q) ||
+      (cli.install?.pip ?? "").toLowerCase().includes(q)
     );
   });
 
@@ -70,10 +70,10 @@ export function CLIDirectory({ clis, stats }: CLIDirectoryProps) {
             {filtered.length > 0 ? (
               filtered.map((cli) => {
                 const s = stats[cli.slug];
-                const installCmd = cli.npm
-                  ? `npm i -g ${cli.npm}`
-                  : cli.pip
-                    ? `pip install ${cli.pip}`
+                const installCmd = cli.install?.npm
+                  ? `npm i -g ${cli.install.npm}`
+                  : cli.install?.pip
+                    ? `pip install ${cli.install.pip}`
                     : null;
 
                 return (
