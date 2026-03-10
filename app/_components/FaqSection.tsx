@@ -39,7 +39,7 @@ export function FaqSection() {
             <a href="https://use-agently.com" target="_blank" rel="noopener noreferrer">
               Agently
             </a>
-            , a platform for building and running agentic workflows.
+            , the routing and settlement layer for AI agents.
           </dd>
         </div>
       </dl>
