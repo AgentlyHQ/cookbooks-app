@@ -9,7 +9,7 @@ export function LandingHeader() {
         <span className="kl-logo-wordmark">cookbooks</span>
       </Link>
       <nav className="kl-nav">
-        <a href="https://github.com/AgentlyHQ/cookbooks-registry" className="kl-nav-link">Registry</a>
+        <a href="https://github.com/AgentlyHQ/cookbooks-registry" className="kl-nav-link" target="_blank" rel="noopener noreferrer">Registry</a>
         <div className="kl-nav-sep" />
         <a href="https://github.com/AgentlyHQ" className="kl-nav-link" target="_blank" rel="noopener noreferrer">GitHub</a>
         <div className="kl-nav-sep" />

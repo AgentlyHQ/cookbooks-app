@@ -22,8 +22,8 @@ export default async function HomePage() {
             <strong>cookbooks</strong> — where agentic tools come to find what they need
           </div>
           <div className="kl-footer-links">
-            <a href="https://github.com/AgentlyHQ">GitHub</a>
-            <a href="https://github.com/AgentlyHQ/cookbooks-registry">Registry</a>
+            <a href="https://github.com/AgentlyHQ" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/AgentlyHQ/cookbooks-registry" target="_blank" rel="noopener noreferrer">Registry</a>
           </div>
         </footer>
       </div>
