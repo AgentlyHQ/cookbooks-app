@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { CLIEntry } from "@/lib/types";
 
 const TABS = ["All Time"];
+const PAGE_SIZE = 20;
 
 function rankClass(r: number) {
   if (r === 1) return "kl-rank-1";
@@ -28,8 +29,15 @@ interface Props {
 export function RegistrySection({ clis, stars }: Props) {
   const [query, setQuery] = useState("");
   const [activeTab, setActiveTab] = useState(0);
+  const [page, setPage] = useState(0);
 
-  const filtered = clis.filter((c) => {
+  const sorted = [...clis].sort((a, b) => {
+    const sa = stars[a.slug] ?? -1;
+    const sb = stars[b.slug] ?? -1;
+    return sb - sa;
+  });
+
+  const filtered = sorted.filter((c) => {
     if (!query) return true;
     const q = query.toLowerCase();
     return (
@@ -38,6 +46,9 @@ export function RegistrySection({ clis, stars }: Props) {
       (c.github ?? "").toLowerCase().includes(q)
     );
   });
+
+  const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
+  const paginated = filtered.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
     <section className="kl-registry" id="registry">
@@ -67,8 +78,8 @@ export function RegistrySection({ clis, stars }: Props) {
           type="text"
           placeholder="Search the registry..."
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          onKeyDown={(e) => e.key === "Escape" && setQuery("")}
+          onChange={(e) => { setQuery(e.target.value); setPage(0); }}
+          onKeyDown={(e) => { if (e.key === "Escape") { setQuery(""); setPage(0); } }}
         />
         <span className="kl-search-shortcut">/</span>
       </div>
@@ -82,9 +93,9 @@ export function RegistrySection({ clis, stars }: Props) {
           </tr>
         </thead>
         <tbody>
-          {filtered.map((cli, i) => (
+          {paginated.map((cli, i) => (
             <tr key={cli.slug} onClick={() => (window.location.href = `/${cli.slug}`)}>
-              <td className={rankClass(i + 1)}>{i + 1}</td>
+              <td className={rankClass(page * PAGE_SIZE + i + 1)}>{page * PAGE_SIZE + i + 1}</td>
               <td>
                 <Link href={`/${cli.slug}`} className="kl-tool-name" style={{ textDecoration: "none" }}>
                   {cli.name}
@@ -98,6 +109,28 @@ export function RegistrySection({ clis, stars }: Props) {
           ))}
         </tbody>
       </table>
+
+      {totalPages > 1 && (
+        <div className="kl-pagination">
+          <button
+            className="kl-page-btn"
+            onClick={() => setPage((p) => Math.max(0, p - 1))}
+            disabled={page === 0}
+          >
+            ← Prev
+          </button>
+          <span className="kl-page-info">
+            {page + 1} / {totalPages}
+          </span>
+          <button
+            className="kl-page-btn"
+            onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
+            disabled={page === totalPages - 1}
+          >
+            Next →
+          </button>
+        </div>
+      )}
     </section>
   );
 }

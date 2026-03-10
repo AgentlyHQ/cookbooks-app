@@ -577,6 +577,28 @@ html[data-theme="dark"] .kl-root {
 .kl-installs-label { color: var(--kl-muted); font-size: 10px; letter-spacing: 0.06em; }
 .kl-stars-col      { text-align: right; color: var(--kl-muted); font-size: 12px; font-variant-numeric: tabular-nums; }
 
+/* pagination */
+.kl-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 18px 0 4px;
+}
+.kl-page-btn {
+  background: none;
+  border: 1px solid var(--kl-border);
+  color: var(--kl-muted);
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.kl-page-btn:hover:not(:disabled) { border-color: var(--kl-accent); color: var(--kl-text); }
+.kl-page-btn:disabled { opacity: 0.3; cursor: default; }
+.kl-page-info { color: var(--kl-dim); font-size: 12px; font-variant-numeric: tabular-nums; }
+
 /* hot dot */
 .kl-hot-dot {
   display: inline-block;
