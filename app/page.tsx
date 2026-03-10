@@ -3,7 +3,6 @@ import { getGitHubStars } from "@/lib/github";
 import { LandingHeader } from "@/app/_components/LandingHeader";
 import { LandingHero } from "@/app/_components/LandingHero";
 import { RegistrySection } from "@/app/_components/RegistrySection";
-import { FaqSection } from "@/app/_components/FaqSection";
 
 export default async function HomePage() {
   const clis = await getCLIs();
@@ -18,7 +17,6 @@ export default async function HomePage() {
       <LandingHero />
 <RegistrySection clis={clis} stars={stars} />
       <div id="workflows" />
-      <FaqSection />
       <div className="kl-footer-wrap">
         <footer className="kl-footer">
           <div className="kl-footer-left">

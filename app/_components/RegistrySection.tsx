@@ -53,7 +53,7 @@ export function RegistrySection({ clis, stars }: Props) {
   return (
     <section className="kl-registry" id="registry">
       <div className="kl-reg-header">
-        <span className="kl-reg-title">Registry</span>
+        <span className="kl-reg-title">CLI Registry</span>
         <span className="kl-reg-count">
           <em>{clis.length}</em> tools
         </span>
