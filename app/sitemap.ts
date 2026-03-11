@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getCLIs } from "@/lib/registry";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://cookbooks.use-agently.com";
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://cookbooks.sh";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const clis = await getCLIs();
