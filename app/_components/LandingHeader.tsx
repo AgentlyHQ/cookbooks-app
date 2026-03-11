@@ -9,7 +9,7 @@ export function LandingHeader() {
         <span className="cb-logo-wordmark">cookbooks</span>
       </Link>
       <nav className="cb-nav">
-        <a href="#registry" className="cb-nav-link">CLI Registry</a>
+        <a href="/#registry" className="cb-nav-link">CLI Registry</a>
         <div className="cb-nav-sep" />
         <a href="#workflows" className="cb-nav-link cb-nav-link--soon">
           Workflows
