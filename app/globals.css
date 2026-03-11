@@ -328,8 +328,7 @@ html[data-theme="dark"] .cb-root {
 
 .cb-eyebrow {
   font-size: 12px;
-  letter-spacing: 0.20em;
-  text-transform: uppercase;
+  letter-spacing: 0.10em;
   color: var(--cb-muted);
   margin-bottom: 8px;
 }
@@ -365,7 +364,6 @@ html[data-theme="dark"] .cb-root {
 
 .cb-cmd-label {
   font-size: 12px;
-  text-transform: uppercase;
   letter-spacing: 0.16em;
   color: var(--cb-dim);
   margin-bottom: 8px;
@@ -408,7 +406,6 @@ html[data-theme="dark"] .cb-root {
   transform: translateY(-50%);
   font-size: 10px;
   letter-spacing: 0.10em;
-  text-transform: uppercase;
   color: var(--cb-dim);
   opacity: 0;
   transition: opacity 0.18s, color 0.18s;
@@ -428,7 +425,6 @@ html[data-theme="dark"] .cb-root {
   text-align: center;
   font-size: 11px;
   letter-spacing: 0.18em;
-  text-transform: uppercase;
   color: var(--cb-muted);
   margin-bottom: 16px;
 }
@@ -490,7 +486,6 @@ html[data-theme="dark"] .cb-root {
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.14em;
-  text-transform: uppercase;
   color: var(--cb-text);
 }
 
@@ -517,7 +512,6 @@ html[data-theme="dark"] .cb-root {
   cursor: pointer;
   margin-right: -1px;
   transition: all 0.15s;
-  text-transform: uppercase;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -572,7 +566,6 @@ html[data-theme="dark"] .cb-root {
   text-align: left;
   font-size: 11px;
   letter-spacing: 0.14em;
-  text-transform: uppercase;
   color: var(--cb-dim);
   font-weight: 400;
   padding: 0 10px 10px;
@@ -651,7 +644,6 @@ html[data-theme="dark"] .cb-root {
   font-weight: 700;
   letter-spacing: 0.12em;
   color: var(--cb-muted);
-  text-transform: uppercase;
   margin-bottom: 24px;
 }
 
@@ -782,7 +774,6 @@ html[data-theme="dark"] .cb-root {
   padding: 3px 10px;
   font-size: 11px;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
   border: 1px solid var(--cb-border-hi);
   color: var(--cb-muted);
   background: var(--cb-bg-surface);
@@ -829,7 +820,6 @@ html[data-theme="dark"] .cb-root {
 .cb-card-label {
   font-size: 11px;
   letter-spacing: 0.16em;
-  text-transform: uppercase;
   color: var(--cb-muted);
   font-weight: 500;
 }
@@ -900,7 +890,6 @@ html[data-theme="dark"] .cb-root {
 .cb-install-label {
   font-size: 11px;
   letter-spacing: 0.10em;
-  text-transform: uppercase;
   color: var(--cb-accent);
   font-weight: 700;
   width: 28px;

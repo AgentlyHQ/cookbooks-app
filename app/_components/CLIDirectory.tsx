@@ -79,7 +79,7 @@ export function CLIDirectory({ clis, stats }: CLIDirectoryProps) {
                 return (
                   <tr key={cli.slug} className="hover:bg-muted/30 transition-colors">
                     <td className="px-4 py-3">
-                      <Link href={`/${cli.slug}`} className="flex items-start gap-3">
+                      <Link href={`/cli/${cli.slug}`} className="flex items-start gap-3">
                         <div className="bg-muted flex h-8 w-8 shrink-0 items-center justify-center rounded-md ring-1 ring-white/5">
                           <Terminal className="text-muted-foreground/60 h-4 w-4" />
                         </div>
@@ -124,7 +124,7 @@ export function CLIDirectory({ clis, stats }: CLIDirectoryProps) {
 
                     <td className="px-4 py-3 text-right">
                       <Link
-                        href={`/${cli.slug}`}
+                        href={`/cli/${cli.slug}`}
                         className="text-muted-foreground hover:text-foreground inline-flex transition-colors"
                         aria-label={`View ${cli.name}`}
                       >

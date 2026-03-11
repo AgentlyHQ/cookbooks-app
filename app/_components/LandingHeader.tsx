@@ -9,12 +9,12 @@ export function LandingHeader() {
         <span className="cb-logo-wordmark">cookbooks</span>
       </Link>
       <nav className="cb-nav">
-        <a href="/#registry" className="cb-nav-link">CLI Registry</a>
+        <Link href="/#registry" className="cb-nav-link">CLI Registry</Link>
         <div className="cb-nav-sep" />
-        <a href="#workflows" className="cb-nav-link cb-nav-link--soon">
+        <Link href="/#workflows" className="cb-nav-link cb-nav-link--soon">
           Workflows
           <span className="cb-soon-badge">soon</span>
-        </a>
+        </Link>
         <div className="cb-nav-sep" />
         <Link href="/faq" className="cb-nav-link">FAQ</Link>
         <div className="cb-nav-sep" />

@@ -71,7 +71,7 @@ export default async function Image() {
               The Authoritative Registry for CLI Tools
             </span>
             <span style={{ display: "flex", color: "#b5ff4d", fontSize: "16px", fontWeight: 700, letterSpacing: "0.06em" }}>
-              cookbooks.use-agently.com
+              cookbooks.sh
             </span>
           </div>
         </div>
