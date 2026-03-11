@@ -96,10 +96,10 @@ export function RegistrySection({ clis, stars }: Props) {
         </thead>
         <tbody>
           {paginated.map((cli, i) => (
-            <tr key={cli.slug} onClick={() => router.push(`/${cli.slug}`)}>
+            <tr key={cli.slug} onClick={() => router.push(`/cli/${cli.slug}`)}>
               <td className={rankClass(page * PAGE_SIZE + i + 1)}>{page * PAGE_SIZE + i + 1}</td>
               <td>
-                <Link href={`/${cli.slug}`} className="cb-tool-name" style={{ textDecoration: "none" }}>
+                <Link href={`/cli/${cli.slug}`} className="cb-tool-name" style={{ textDecoration: "none" }}>
                   {cli.name}
                 </Link>
 <div className="cb-tool-owner">{cli.github?.split("/")[0]}</div>

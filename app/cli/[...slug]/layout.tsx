@@ -8,7 +8,8 @@ export default function SlugLayout({ children }: { children: React.ReactNode }) 
       <div className="cb-footer-wrap">
         <footer className="cb-footer">
           <div className="cb-footer-left">
-            <strong>cookbooks</strong> — the directory for agentic CLIs, reimagined for agents
+            <strong>cookbooks</strong> — a project by{" "}
+            <a href="https://use-agently.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--cb-accent)", textDecoration: "none" }}>Agently</a>
           </div>
           <div className="cb-footer-links">
             <a href="https://github.com/AgentlyHQ" target="_blank" rel="noopener noreferrer">GitHub</a>

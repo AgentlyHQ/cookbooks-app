@@ -7,7 +7,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const clis = await getCLIs();
 
   const cliRoutes: MetadataRoute.Sitemap = clis.map((cli) => ({
-    url: `${BASE_URL}/${cli.slug}`,
+    url: `${BASE_URL}/cli/${cli.slug}`,
     changeFrequency: "weekly",
     priority: 0.8,
   }));
