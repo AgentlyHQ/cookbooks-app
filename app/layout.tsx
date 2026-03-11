@@ -8,13 +8,13 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL ?? "https://cookbooks.use-agently.com"),
   title: {
-    default: "Cookbooks — The Authoritative CLI Registry",
+    default: "Cookbooks — Curated tools & workflows for your AI agents",
     template: "%s — Cookbooks",
   },
   description: "Where agentic tools come to find what they need. The authoritative registry for CLI tools.",
   icons: { icon: "/favicon.svg" },
   openGraph: {
-    title: "Cookbooks — The Authoritative CLI Registry",
+    title: "Cookbooks — Curated tools & workflows for your AI agents",
     description: "Where agentic tools come to find what they need.",
     type: "website",
     siteName: "Cookbooks",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cookbooks — The Authoritative CLI Registry",
+    title: "Cookbooks — Curated tools & workflows for your AI agents",
     description: "Where agentic tools come to find what they need.",
   },
 };

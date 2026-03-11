@@ -29,19 +29,15 @@ export function LandingHero() {
         ))}
       </pre>
 
-      <p className="cb-wordplay">
-        <code>cli tools</code>&nbsp;→&nbsp;collected in&nbsp;<code>cookbooks</code>
-      </p>
-
       <div className="cb-hero-copy">
         <p className="cb-eyebrow">
-          The <strong>Authoritative</strong> Registry for CLI Tools
+          Curated tools &amp; workflows for your AI agents
         </p>
         <h1 className="cb-h1">
           Where agentic tools<br />come to find what they need.
         </h1>
         <p className="cb-subtext">
-          When Claude, Cursor, Copilot, or Codex reach for a CLI tool,<br />
+          When OpenClaw, Claude, Cursor, Copilot, or Codex reach for a CLI tool,<br />
           they reach for Cookbooks. One registry. Every tool. No ambiguity.
         </p>
       </div>

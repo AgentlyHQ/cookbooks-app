@@ -20,7 +20,8 @@ export default async function HomePage() {
       <div className="cb-footer-wrap">
         <footer className="cb-footer">
           <div className="cb-footer-left">
-            <strong>cookbooks</strong> — where agentic tools come to find what they need
+            <strong>cookbooks</strong> — a project by{" "}
+            <a href="https://use-agently.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--cb-accent)", textDecoration: "none" }}>Agently</a>
           </div>
           <div className="cb-footer-links">
             <a href="https://github.com/AgentlyHQ" target="_blank" rel="noopener noreferrer">GitHub</a>
