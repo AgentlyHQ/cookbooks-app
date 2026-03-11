@@ -1,7 +1,9 @@
+import React from "react";
+
 const AGENTS = [
-  "Claude Code", "Cursor", "GitHub Copilot", "Cline", "OpenAI Codex",
-  "Windsurf", "Roo", "Gemini CLI", "Kilo", "Aider", "Continue",
-  "Devin", "SWE-agent", "OpenCode", "Goose", "Amp", "Droid", "Trae",
+  "OpenAI Codex", "Claude Code", "Copilot", "OpenClaw",
+  "Cursor", "Windsurf", "Gemini", "Aider",
+  "Continue", "OpenCode",
 ];
 
 const ALL = [...AGENTS, ...AGENTS]; // duplicate for seamless loop
@@ -9,7 +11,7 @@ const ALL = [...AGENTS, ...AGENTS]; // duplicate for seamless loop
 export function AgentsCarousel() {
   return (
     <section className="cb-agents">
-      <p className="cb-agents-label">Trusted by agentic tools</p>
+      <p className="cb-agents-label">Use it for your agents on</p>
       <div className="cb-carousel-outer">
         <div className="cb-carousel-track">
           {ALL.map((name, i) => (

@@ -2,6 +2,7 @@ import { getCLIs } from "@/lib/registry";
 import { getGitHubStars } from "@/lib/github";
 import { LandingHeader } from "@/app/_components/LandingHeader";
 import { LandingHero } from "@/app/_components/LandingHero";
+import { AgentsCarousel } from "@/app/_components/AgentsCarousel";
 import { RegistrySection } from "@/app/_components/RegistrySection";
 
 export default async function HomePage() {
@@ -15,7 +16,8 @@ export default async function HomePage() {
     <div className="cb-root">
       <LandingHeader />
       <LandingHero />
-<RegistrySection clis={clis} stars={stars} />
+      <AgentsCarousel />
+      <RegistrySection clis={clis} stars={stars} />
       <div id="workflows" />
       <div className="cb-footer-wrap">
         <footer className="cb-footer">

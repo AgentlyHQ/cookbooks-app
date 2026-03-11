@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LandingHeader } from "@/app/_components/LandingHeader";
+import { AgentsCarousel } from "@/app/_components/AgentsCarousel";
 import { FaqSection } from "@/app/_components/FaqSection";
 
 export const metadata: Metadata = {
@@ -12,6 +13,7 @@ export default function FaqPage() {
     <div className="cb-root">
       <LandingHeader />
       <div style={{ paddingTop: "52px" }}>
+        <AgentsCarousel />
         <FaqSection />
       </div>
     </div>
