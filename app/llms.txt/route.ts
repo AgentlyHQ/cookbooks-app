@@ -1,6 +1,6 @@
 import { getCLIs } from "@/lib/registry";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://cookbooks.use-agently.com";
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://cookbooks.sh";
 
 export const revalidate = 3600;
 
